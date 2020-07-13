@@ -69,14 +69,14 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b sql-extended https://github.com/MoveAngel/One4uBot /root/One4uBot
-RUN mkdir /root/One4uBot/bin/
-WORKDIR /root/One4uBot/
+RUN git clone -b sql-extended https://github.com/MoveAngel/One4uBot /One4uBot
+RUN mkdir /One4uBot/bin/
+WORKDIR /One4uBot/
 
 #
 # Copies session and config (if it exists)
 #
-COPY ./sample_config.env ./userbot.session* ./config.env* /root/userbot/
+COPY ./sample_config.env ./userbot.session* ./config.env* /One4uBot/
 
 #
 # Install requirements
